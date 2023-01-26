@@ -1,0 +1,175 @@
+BODY {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color:var(--backgroundColor);    
+}
+
+:root {
+    --navColor: #023e8a;
+    --backgroundColor: #eaf4f4;
+    --borderRadius: 13px;
+    --greenColor: #2ba84a;
+    --redColor: #e63946;
+}
+
+.container{
+    height:100vh;
+    display:grid;
+    grid-template-columns:360px auto;
+    grid-template-rows:85px auto;
+    grid-template-areas:"nav nav" "aside main";
+    row-gap:20px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: var(--navColor);
+    font-size: 40px;
+    padding: 15px;
+    color: white;
+    padding-left:55px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: var(--backgroundColor);
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--backgroundColor);
+    display: grid;
+    grid-template-columns: repeat(3,290px);
+    grid-template-rows: repeat(2,auto);
+    gap: 40px;
+    justify-content: center;
+}
+
+.checkbox-list{
+    display:grid;
+    width:185px;
+    grid-template-columns:repeat(2,auto);
+    row-gap:6px;
+}
+
+.price{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.price > p{
+    font-size:14px;
+}
+
+#range{
+    width:100%;
+}
+
+.category-container {
+    background-color: white;
+    border-radius: var(--borderRadius);
+    margin: 0px auto;
+    box-shadow: 0px 1px 9px 0px grey;
+    width: 200px;
+    padding: 20px;
+}
+
+.product {
+    background-color: white;
+    margin: 5px;
+    padding: 20px;
+    border-radius: var(--borderRadius);
+    box-shadow: 0px 1px 9px 0px grey;
+}
+
+.image img {
+    width: 100%;
+    border-radius: var(--borderRadius);
+}
+
+.image{
+    position:relative;
+}
+
+.image::after {
+    content: "25$";
+    background-color: var(--greenColor);
+    color: white;
+    padding: 3px 15px;
+    font-size: 12px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 9px 0px grey inset;
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+
+.details p{
+    color:grey;
+}
+
+.product2 {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: auto;
+    column-gap:10px;
+}
+
+button{
+    width:100%;
+    margin:5px;
+    padding:10px;
+    font-size:17px;
+    border:none;
+    border-radius:var(--borderRadius);
+    color:white;
+    font-weight:bold;
+}
+
+.green-btn{
+    background-color:var(--greenColor);
+}
+
+.blue-btn{
+    background-color:var(--navColor);
+}
+
+.content{
+    position:relative;
+}
+
+.content p{
+    font-size:14px;
+    color:grey;
+}
+
+.content h2 span {
+    color:var(--redColor);
+}
+
+.content::after {
+    content: "Suggested for You";
+    background-color: var(--redColor);
+    color: white;
+    padding: 3px 15px;
+    font-size: 12px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 9px 0px grey inset;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.product2 img{
+    height:100%;
+    width:300px;
+    position:relative;
+    left:-35px;
+}
+
+.product2 .image{
+    overflow:hidden;
+    border-radius:var(--borderRadius);
+}
